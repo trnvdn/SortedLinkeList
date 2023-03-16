@@ -100,7 +100,6 @@ public:
         Node *right = head->next;
 
         Node *temp = new Node;
-
         while (left->next){
             while (right){
                 if ((left->num) > (right->num)){
