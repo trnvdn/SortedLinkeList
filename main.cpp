@@ -63,7 +63,9 @@ public:
                 while (current->next != NULL)
                 {
                     if (index == value-1) {
+                        temp = current->next;
                         current->next = current->next->next;
+                        delete temp;
                         isCorrect = true;
                         break;
                     }
@@ -76,8 +78,11 @@ public:
                 cin >> value;
                 while (current->next != NULL)
                 {
-                    if (current->next->num == value) {
+                    if (current->next->num == value)
+                    {
+                        temp = current->next;
                         current->next = current->next->next;
+                        delete temp;
                         isCorrect = true;
                         break;
                     }
