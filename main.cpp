@@ -21,7 +21,9 @@ public:
         nd->num = d;
         nd->next = NULL;
         if(head == NULL)
+        {
             head = nd;
+        }
         else
         {
             Node *current = head;
@@ -56,13 +58,15 @@ public:
         cout<<"Delete by: \n1.Index\n2.By value first occurence"<<endl;
         int n;
         cin>>n;
-        switch(n) {
+        switch(n)
+        {
             case 1:
                 cout<<"Enter index"<<endl;
                 cin >> value;
                 while (current->next != NULL)
                 {
-                    if (index == value-1) {
+                    if (index == value-1)
+                    {
                         temp = current->next;
                         current->next = current->next->next;
                         delete temp;
@@ -105,9 +109,12 @@ public:
         Node *right = head->next;
 
         Node *temp = new Node;
-        while (left->next){
-            while (right){
-                if ((left->num) > (right->num)){
+        while (left->next)
+        {
+            while (right)
+            {
+                if ((left->num) > (right->num))
+                {
                     temp->num = left->num;
                     left->num = right->num;
                     right->num = temp->num;
@@ -127,7 +134,8 @@ int main()
         int choise;
         cout<<"1.Add data\n2.Print data\n3.Remove data"<<endl;
         cin>>choise;
-        switch (choise) {
+        switch (choise)
+        {
             case 1:
                 cout<<"Enter num"<<endl;
                 int num;
