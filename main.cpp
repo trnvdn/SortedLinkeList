@@ -98,7 +98,6 @@ public:
     void Sort(){
         Node *left = head;
         Node *right = head->next;
-
         Node *temp = new Node;
 
         while (left->next){
